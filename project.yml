@@ -1,0 +1,30 @@
+name: SendToRippling
+options:
+  bundleIdPrefix: com.rjwalters
+  deploymentTarget:
+    macOS: "13.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "0.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: ""
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "-"
+    ENABLE_HARDENED_RUNTIME: NO
+
+targets:
+  SendToRippling:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: SendToRippling
+    settings:
+      base:
+        INFOPLIST_FILE: SendToRippling/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.rjwalters.send-to-rippling
+        PRODUCT_NAME: "Send to Rippling"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
